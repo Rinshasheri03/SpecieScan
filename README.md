@@ -14,11 +14,17 @@ The main objective of this project is to develop an automated system capable of 
 ⚫ Technologies Used
 
 . Python
+
 . TensorFlow and Keras
+
 . Convolutional Neural Network (CNN)
+
 . OpenCV for image processing
+
 . Flask for web application development
+
 . HTML and CSS for frontend design
+
 . NumPy and Pandas for data handling
 
 ⚫ Project Structure
