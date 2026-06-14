@@ -1,0 +1,109 @@
+{% extends 'Researcher/researcherindex.html' %}
+
+{% block body %}
+    <body>
+        <style>
+            /* Card container */
+            .card-container {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            /* Style for the card */
+            .card {
+                width: 100%;
+                max-width: 600px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                text-align: left;
+            }
+
+            /* Title of the form */
+            .card-header {
+                text-align: center;
+                font-size: 24px;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+            /* Form input and label styling */
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            .form-group label {
+                display: block;
+                font-weight: 600;
+            }
+
+            .form-group input, .form-group textarea {
+                width: 100%;
+                padding: 10px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+            }
+
+            .form-group textarea {
+                resize: vertical;
+                height: 150px;
+            }
+
+            /* Submit button styling */
+            .form-group button {
+                background-color: #007bff;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 4px;
+                border: none;
+                font-size: 16px;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            .form-group button:hover {
+                background-color: #0056b3;
+            }
+
+            /* Add some spacing at the bottom of the card */
+            .card-footer {
+                text-align: center;
+                margin-top: 20px;
+            }
+        </style>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    Upload Findings
+                </div>
+
+                <form action="/uploadfindings_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="textfield" id="name" required pattern="[A-Za-z\s]{1,50}" title="Please enter a valid name." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="findings">Findings</label>
+                        <textarea name="textarea" id="findings" required minlength="10" maxlength="500" title="Please enter your findings (10 to 500 characters)."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file">Image</label>
+                        <input type="file" name="file" id="file" required accept=".pdf,.doc,.docx,.jpg,.png" title="Please upload a file (PDF, DOC, DOCX, JPG, or PNG)." />
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" name="Submit">Upload</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </body>
+{% endblock %}

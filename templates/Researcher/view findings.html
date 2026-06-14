@@ -1,0 +1,111 @@
+{% extends 'Researcher/researcherindex.html' %}
+
+{% block body %}
+    <body>
+        <style>
+            /* Card container */
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                padding: 20px;
+            }
+
+            /* Style for individual cards */
+            .card {
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            /* Center image inside the card */
+            .card img {
+                width: 150px; /* Set width */
+                height: 150px; /* Set height */
+                border-radius: 50%; /* Make the image round */
+                object-fit: cover; /* Ensure the image fits well */
+                margin-bottom: 15px; /* Space below the image */
+                margin-left: auto; /* Center horizontally */
+                margin-right: auto; /* Center horizontally */
+            }
+
+            .card h3 {
+                margin: 10px 0; /* Add some space around the heading */
+            }
+
+            .card p {
+                margin-bottom: 15px; /* Add space below the findings text */
+            }
+
+            /* Delete button styling with trash icon */
+            .card a {
+                text-decoration: none;
+                color: white;
+                background-color: #dc3545; /* Bootstrap danger red */
+                 background-color: #0056b3;
+                padding: 10px;
+                border-radius: 4px;
+                text-align: center;
+                margin-top: 10px;
+                display: block;
+                font-size: 16px;
+            }
+
+            /* Trash icon styling */
+            .card a i {
+                margin-right: 5px;
+            }
+
+            .card a:hover {
+                background-color: #c82333; /* Darker red on hover */
+                 background-color: #0056b3;
+            }
+
+            /* Add New button styling */
+            .add-new {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .add-new a {
+                background-color: #007bff;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 4px;
+            }
+
+            .add-new a:hover {
+                background-color: #0056b3;
+            }
+        </style>
+
+        <div class="card-container">
+            {% for item in val %}
+                <div class="card">
+                    <!-- Image is placed at the top of the card and made round, centered horizontally -->
+                    <img src="{{ item.image.url }}" alt="Image of {{ item.name }}" height="150" width="150">
+                    <h3>{{ item.name }}</h3>
+                    <p>{{ item.findings }}</p>
+                    <!-- Delete button with trash icon -->
+                    <a href="/deletefindings/{{ item.id }}"><i class="fas fa-trash-alt"></i> Delete</a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="add-new">
+            <a href="/uploadfindingsView">Add New</a>
+        </div>
+
+        <!-- Include Font Awesome for the trash icon -->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    </body>
+{% endblock %}
+

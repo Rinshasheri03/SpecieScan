@@ -1,0 +1,197 @@
+{#  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#  <html xmlns="http://www.w3.org/1999/xhtml">#}
+{# <head> #}
+{#  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#  <title>Untitled Document</title> #}
+{#  </head> #}
+{#{% extends 'Admin/adminindex.html' %}#}
+{#{% block body %}#}
+{#<body>#}
+{##}
+{#  <table width="200" border="1" class="table">#}
+{#  <thead class="table-dark">#}
+{#    <tr>#}
+{#      <td>Image</td>#}
+{#      <td>Name</td>#}
+{#      <td>Kingdom</td>#}
+{#      <td>Phylum</td>#}
+{#      <td>Class</td>#}
+{#      <td>Order</td>#}
+{#      <td>Family</td>#}
+{#      <td>Genus</td>#}
+{#      <td>Species</td>#}
+{#      <td>LifeCycle</td>#}
+{#      <td>&nbsp;</td>#}
+{#        </thead>#}
+{#    </tr>#}
+{#      {% for item in val %}#}
+{#    <tr>#}
+{#        <td>{{ item.Image}} </td>#}
+{#      <td>{{ item.Name}}</td>#}
+{#        <td>{{item.Kingdom }}</td>#}
+{#      <td>{{item.Phylum }}</td>#}
+{#      <td>&nbsp;{{item.Class }}</td>#}
+{#      <td>&nbsp;{{item.Order }}</td>#}
+{#      <td>&nbsp;{{item.Family }}</td>#}
+{#      <td>{{item.Genus }}</td>#}
+{#      <td>{{item.Species }}</td>#}
+{#      <td>{{item.LifeCycle }}</td>#}
+{#      <td >#}
+{#	  <br />#}
+{#	  <br> <a href="/editdetails/{{ item.id }}">Edit</a>#}
+{#	  <br />#}
+{#	  <br><a href="/deletedetails/{{ item.id }}">Delete</a>#}
+{#	 </td>#}
+{#    </tr>#}
+{#      {%  endfor %}#}
+{#      <tr>#}
+{#          <td><a href="/uploaddetailsView">Addnew</a></td>#}
+{#      </tr>#}
+{#  </table>#}
+{##}
+{##}
+{#</body>#}
+{#  </html> #}
+{#{%  endblock %}#}
+
+
+
+{% extends 'Admin/adminindex.html' %}
+{% block body %}
+<body>
+
+    <style>
+        /* Table container */
+        .table-container {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        /* Table styling */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /* Table header */
+        .table-dark {
+            background-color: #343a40;
+            color: white;
+            text-align: left;
+        }
+
+        /* Table data rows */
+        .table td, .table th {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        /* Table row hover effect */
+        .table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Table button styling */
+        .table a {
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            margin-top: 5px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .table a.edit {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .table a.delete {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .table a.edit:hover {
+            background-color: #0056b3;
+        }
+
+        .table a.delete:hover {
+            background-color: #c82333;
+        }
+
+        /* Add new button styling */
+        .add-new {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .add-new a {
+            text-decoration: none;
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .add-new a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <!-- Table container -->
+    <div class="table-container">
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+{#                      <th>Scientific_Name</th>#}
+                    <th>Kingdom</th>
+                    <th>Phylum</th>
+                    <th>Class</th>
+                    <th>Order</th>
+                    <th>Family</th>
+                    <th>Genus</th>
+                    <th>Species</th>
+                    <th>Life Cycle</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in val %}
+                    <tr>
+                        <td><img src="{{ item.Image.url }}" alt="{{ item.Name }} image" style="max-width: 100px; border-radius: 5px;"></td>
+                        <td>{{ item.Common_Name }}
+{#                        </td>#}
+{#                        <td>#}
+                            <br/>
+                           ( {{ item.Scientific_Name }})</td>
+                        <td>{{ item.Kingdom }}</td>
+                        <td>{{ item.Phylum }}</td>
+                        <td>{{ item.Class }}</td>
+                        <td>{{ item.Order }}</td>
+                        <td>{{ item.Family }}</td>
+                        <td>{{ item.Genus }}</td>
+                        <td>{{ item.Species }}</td>
+                        <td>{{ item.LifeCycle }}</td>
+                        <td>
+                            <a href="/editdetails/{{ item.id }}" class="edit">Edit</a>
+                            <a href="/deletedetails/{{ item.id }}" class="delete">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Add New button -->
+        <div class="add-new">
+            <a href="/uploaddetailsView">Add New</a>
+        </div>
+    </div>
+
+</body>
+{% endblock %}

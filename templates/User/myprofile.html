@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <label>Name : 
+  <textarea name="textarea"></textarea>
+  </label>
+  <p>
+    <label>Place : 
+     &nbsp;<textarea name="textarea2"></textarea>
+    </label>
+  </p>
+  <p>
+    <label> Post :
+    &nbsp;&nbsp;&nbsp;<textarea name="textarea4"></textarea>
+    <br />
+    <br /> 
+    </label> Pin :
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="textarea3"></textarea>
+  </p>
+   <tr>
+        <td>Phone:</td>
+    <td>
+
+     <input type="text" name="textfield5" value="{{ profile.phone}}"  required="" pattern="/^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/" title="Please enter a valid phone number.Example 123-456-7890"/>
+
+    </td>
+    </tr>
+  <p>
+    <label>
+   &nbsp;&nbsp; <input type="submit" name="Submit" value="Submit" />
+    </label>
+	<!-- TemplateBeginEditable name="EditRegion1" -->Edit<!-- TemplateEndEditable -->
+  </p>
+</form>
+</body>
+</html>

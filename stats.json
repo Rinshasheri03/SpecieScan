@@ -1,0 +1,42 @@
+{
+  "stats": {
+    "1000226020_PposTvb.jpg": {
+      "median-intensity": 0.7843137254901961,
+      "mean-intensity": 0.6749029637021423,
+      "stddev-intensity": 0.267623032998052,
+      "median-saturation": 0.6355555555555555,
+      "mean-saturation": 0.6981172470931004,
+      "stddev-saturation": 0.13707289027888045,
+      "median-hue": 0.07925407925407925,
+      "mean-hue": 0.07710243851683662,
+      "stddev-hue": 0.05543307611926953,
+      "seg-absolute-size": 686624,
+      "seg-relative-size": 0.8522291728726045,
+      "c-length": 3441,
+      "c-area": 709235.0586437548,
+      "c-xmin": 39.22177303966274,
+      "c-xmax": 1040.86867060163,
+      "c-ymin": 32.76239101684953,
+      "c-ymax": 741.8415651483051,
+      "c-area-calibrated": 4196.657151738194,
+      "width-calibrated": 77.04976135092055,
+      "height-calibrated": 54.54455185626581,
+      "calibration-length": 13.0
+    }
+  },
+  "args": {
+    "images": [
+      "C:\\PycharmProjects\\PycharmProjects\\myproject\\media/1000226020_PposTvb.jpg"
+    ],
+    "alpha": 1.0,
+    "method": "otsu",
+    "border": 0.1,
+    "displaymode": "screen",
+    "nocalibration": false,
+    "outstats": "stats.json",
+    "calibration_pattern": "checkerboard",
+    "calibration_pos": "bottom_left",
+    "calibration_relative_height": 0.3,
+    "calibration_relative_width": 0.1
+  }
+}

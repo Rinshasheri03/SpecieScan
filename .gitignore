@@ -1,0 +1,13 @@
+# Ignore all trained machine learning models (too large for standard GitHub)
+*.h5
+
+# Ignore local media/upload directories
+/media/
+/static/collected/
+
+# Ignore local databases and IDE configurations
+*.sqlite3
+.idea/
+__pycache__/
+*.pyc
+*.weights

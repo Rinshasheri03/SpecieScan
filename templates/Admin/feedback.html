@@ -1,0 +1,103 @@
+{#{% extends 'Admin/adminindex.html' %}#}
+{#{% block body %}#}
+{#<body>#}
+{#<form method="post" action="">#}
+{#<table class="table">#}
+{#<thead class="table-dark">#}
+{#  <tr>#}
+{#    <td>Name</td>#}
+{#    <td>Feedback</td>#}
+{#    <td>Rating</td>#}
+{#    <td>Date</td>#}
+{#  </tr>#}
+{#</thead>#}
+{#     {% for item in feed %}#}
+{#  <tr>#}
+{#    <td>{{ item.USER.name }}</td>#}
+{#    <td>{{ item.feedback}}</td>#}
+{#    <td>{{ item.rating }}</td>#}
+{#    <td>&nbsp;{{ item.date }}</td>#}
+{#  </tr>#}
+{#    {% endfor %}#}
+{#</table>#}
+{#</form>#}
+{#</body>#}
+{#{% endblock %}#}
+{% extends 'Admin/adminindex.html' %}
+
+{% block body %}
+    <body>
+        <style>
+            /* Card container */
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }
+
+            /* Individual card styling */
+            .card {
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            /* Card title styling (User Name) */
+            .card h3 {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            /* Styling for the feedback and rating */
+            .card p {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+
+            .card .rating {
+                font-size: 1.1em;
+                color: #ff9f00; /* Gold color for rating */
+                margin-bottom: 10px;
+            }
+
+            .card .date {
+                font-size: 0.9em;
+                color: #888;
+            }
+
+            /* Styling for the feedback card actions (if needed) */
+            .card a {
+                text-decoration: none;
+                color: #fff;
+                background-color: #007bff;
+                padding: 8px 15px;
+                border-radius: 4px;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .card a:hover {
+                background-color: #0056b3;
+            }
+        </style>
+
+        <div class="card-container">
+            {% for item in feed %}
+                <div class="card">
+                    <h3>{{ item.USER.name }}</h3>
+                    <p><strong>Feedback:</strong> {{ item.feedback }}</p>
+                    <p class="rating"><strong>Rating:</strong> {{ item.rating }} ★</p>
+                    <p class="date"><strong>Date:</strong> {{ item.date }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+{% endblock %}

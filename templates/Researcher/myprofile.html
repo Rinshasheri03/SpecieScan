@@ -1,0 +1,93 @@
+{% extends 'Researcher/researcherindex.html' %}
+
+{% block body %}
+    <body>
+        <style>
+            /* Style for centering the form card */
+            .form-container {
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+
+            /* Style for table and inputs */
+            table {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            td {
+                padding: 8px 10px;
+                text-align: left;
+            }
+
+            input[type="text"], input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            input[type="submit"] {
+                cursor: pointer;
+{#                background-color: #4CAF50; #}
+                   background-color: #0056b3;
+                color: white;
+                border: none;
+            }
+
+            input[type="submit"]:hover {
+{#                background-color: #45a049;                background-color: #0056b3;#}
+                    background-color: #0056b3;
+            }
+        </style>
+
+        <div class="form-container">
+            <form id="form1" name="form1" method="post" action="/updateprofile">
+                <table>
+                    <tr>
+                        <td>Name :</td>
+                        <td>
+                            <input type="text" name="textfield" value="{{ profile.name }}" required pattern="[A-Za-z]{1,32}" title="Please enter your name using letters only">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Place :</td>
+                        <td>
+                            <input type="text" name="textfield2" value="{{ profile.place }}" required pattern="[A-Za-z]{1,32}" title="Please enter a valid place name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Post:</td>
+                        <td>
+                            <input type="text" name="textfield3" value="{{ profile.post }}" required pattern="[A-Za-z]{1,32}" title="Please enter a valid post">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pin:</td>
+                        <td>
+                            <input type="text" name="textfield4" value="{{ profile.pin }}" required pattern="^[1-6][0-9]{5}$" title="Please enter a valid 6-digit PIN">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td>
+                            <input type="text" name="textfield5" value="{{ profile.phone }}" required pattern="/^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/" title="Please enter a valid phone number. Example: 123-456-7890">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" name="Submit" value="Submit" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+{% endblock %}

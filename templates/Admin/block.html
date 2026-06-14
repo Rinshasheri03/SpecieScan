@@ -1,0 +1,128 @@
+{#{% extends 'Admin/adminindex.html' %}#}
+{#{% block body %}#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{#<table class="table">#}
+{#<thead class="table-dark">#}
+{#  <tr>#}
+{#      <td>Name</td>#}
+{#    <td>Address</td>#}
+{#    <td>Phone</td>#}
+{#    <td>block/unblock</td>#}
+{#  </tr>#}
+{#</thead>#}
+{#    {%  for item in person %}#}
+{#  <tr>#}
+{#    <td>{{ item.name }}</td>#}
+{#    <td>&nbsp;{{ item.place }},{{ item.post }},{{ item.pin }}</td>#}
+{#    <td>{{ item.phone }}</td>#}
+{#      <td>#}
+{#          {% if item.LOGIN.type == 'user' %}#}
+{#             <a href="/blockUser/{{ item.LOGIN.id }}">block</a>#}
+{#          {% else %}#}
+{#              <a href="/unblockUser/{{ item.LOGIN.id }}">unblock</a>#}
+{#          {% endif %}#}
+{#      </td>#}
+{#  </tr>#}
+{#     {% endfor %}#}
+{#</table>#}
+{#</body>#}
+{#{% endblock %}#}
+{##}
+
+
+
+{% extends 'Admin/adminindex.html' %}
+
+{% block body %}
+    <body>
+        <style>
+            /* Card container */
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }
+
+            /* Individual card styling */
+            .card {
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            /* Card title (User Name) */
+            .card h3 {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            /* Card content styling */
+            .card p {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+
+            /* Block/Unblock Button styling */
+            .card .action-btn {
+                text-decoration: none;
+                color: #fff;
+                background-color: #007bff;
+                padding: 8px 15px;
+                border-radius: 4px;
+                text-align: center;
+                margin-top: 10px;
+                display: inline-block;
+            }
+
+            .card .action-btn:hover {
+                background-color: #0056b3;
+            }
+
+            .card .unblock-btn {
+                background-color: #dc3545;
+            }
+
+            .card .unblock-btn:hover {
+                background-color: #c82333;
+            }
+        </style>
+
+        <!-- Card container to display all users in card format -->
+        <div class="card-container">
+            {% for item in person %}
+                <div class="card">
+                    <!-- User's Name -->
+                    <h3>{{ item.name }}</h3>
+
+                    <!-- User's Address -->
+                    <p><strong>Address:</strong> {{ item.place }}, {{ item.post }}, {{ item.pin }}</p>
+
+                    <!-- User's Phone -->
+                    <p><strong>Phone:</strong> {{ item.phone }}</p>
+
+                    <!-- Block/Unblock Button -->
+                    <div>
+                        {% if item.LOGIN.type == 'user' %}
+                            <a href="/blockUser/{{ item.LOGIN.id }}" class="action-btn">Block</a>
+                        {% else %}
+                            <a href="/unblockUser/{{ item.LOGIN.id }}" class="action-btn unblock-btn">Unblock</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+{% endblock %}

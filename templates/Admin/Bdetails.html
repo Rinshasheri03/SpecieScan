@@ -1,0 +1,232 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{#<form action="/uploaddetails" method="post" enctype="multipart/form-data" name="form1" id="form1">#}
+{#  <table width="200" border="1">#}
+{##}
+{#    <tr>#}
+{#      <td>Image</td>#}
+{#      <td><label>#}
+{#        <input type="file" name="file" />#}
+{#      </label></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Name</td>#}
+{#      <td><label>#}
+{#        <input type="text" name="textfield" />#}
+{#      </label></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Kingdom</td>#}
+{#      <td><label>#}
+{#        <input type="text" name="textfield2" />#}
+{#      </label></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Phylum</td>#}
+{#      <td><label>#}
+{#        <input type="text" name="textfield3" />#}
+{#      </label></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Class</td>#}
+{#      <td><label>#}
+{#        <input type="text" name="textfield4" />#}
+{#      </label></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Order</td>#}
+{#      <td><label>#}
+{#        <input type="text" name="textfield5" />#}
+{#      </label></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Family</td>#}
+{#      <td><label>#}
+{#        <input type="text" name="textfield6" />#}
+{#      </label></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Genus</td>#}
+{#      <td><label>#}
+{#        <input type="text" name="textfield7" />#}
+{#      </label></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Species</td>#}
+{#      <td><label>#}
+{#        <input type="text" name="textfield8" />#}
+{#      </label></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>LIfe Cycle </td>#}
+{#      <td><label>#}
+{#        <textarea name="textarea"></textarea>#}
+{#      </label></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>&nbsp;</td>#}
+{#      <td><label>#}
+{#          <input type="submit" name="submit" value="OK" />#}
+{#      </label></td>#}
+{#    </tr>#}
+{##}
+{#  </table>#}
+{#</form>#}
+{#</body>#}
+{#</html>#}
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Upload Details</title>
+    <style>
+        /* Card container styling */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .card h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea,
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group input[type="file"] {
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card">
+            <h2>Upload Details</h2>
+            <form action="/uploaddetails" method="post" enctype="multipart/form-data" name="form1" id="form1">
+
+                <div class="form-group">
+                    <label for="file">Image</label>
+                    <input type="file" name="file" id="file" />
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Common_Name</label>
+                    <input type="text" name="textfield" id="name" />
+                </div>
+                <div class="form-group">
+                    <label for="name">Scientific_Name</label>
+                    <input type="text" name="textfield9" id="name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="kingdom">Kingdom</label>
+                    <input type="text" name="textfield2" id="kingdom" />
+                </div>
+
+                <div class="form-group">
+                    <label for="phylum">Phylum</label>
+                    <input type="text" name="textfield3" id="phylum" />
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Class</label>
+                    <input type="text" name="textfield4" id="class" />
+                </div>
+
+                <div class="form-group">
+                    <label for="order">Order</label>
+                    <input type="text" name="textfield5" id="order" />
+                </div>
+
+                <div class="form-group">
+                    <label for="family">Family</label>
+                    <input type="text" name="textfield6" id="family" />
+                </div>
+
+                <div class="form-group">
+                    <label for="genus">Genus</label>
+                    <input type="text" name="textfield7" id="genus" />
+                </div>
+
+                <div class="form-group">
+                    <label for="species">Species</label>
+                    <input type="text" name="textfield8" id="species" />
+                </div>
+
+                <div class="form-group">
+                    <label for="lifeCycle">LifeCycle</label>
+                    <textarea name="textarea" id="lifeCycle"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" name="submit" value="OK" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

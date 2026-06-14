@@ -1,0 +1,133 @@
+{#{% extends 'Admin/adminindex.html' %}#}
+{#{% block body %}#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>verify</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{#<table class="table">#}
+{#<thead class="table-dark">#}
+{#  <tr>#}
+{#    <td>Name</td>#}
+{#    <td>Phone</td>#}
+{#    <td>Address</td>#}
+{#    <td>&nbsp;</td>#}
+{#  </tr>#}
+{#</thead>#}
+{#{% for item in verify %}#}
+{#    <tr>#}
+{#        <td>{{ item.name }}</td>#}
+{#         <td>{{ item.phone }}</td>#}
+{#         <td>{{ item.place }},{{ item.post }},{{ item.pin }}</td>#}
+{#        <td>#}
+{#            {% if item.LOGIN.type == 'researcher' %}#}
+{#            <a href="/acceptResearcher/{{ item.LOGIN.id }}">accept</a>#}
+{#                 <a href="/rejectResearcher/{{ item.LOGIN.id }}">reject</a>#}
+{#            {% else %}#}
+{#           {{ item.LOGIN.type }}#}
+{#            {% endif %}#}
+{#        </td>#}
+{#    </tr>#}
+{#{% endfor %}#}
+{##}
+{##}
+{#</table>#}
+{#</body>#}
+{#{% endblock %}#}
+
+
+
+
+{% extends 'Admin/adminindex.html' %}
+
+{% block body %}
+    <body>
+        <style>
+            /* Card container */
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }
+
+            /* Individual card styling */
+            .card {
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            /* Card title styling (User Name) */
+            .card h3 {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            /* Styling for the card content (Phone, Address) */
+            .card p {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+
+            /* Button styling */
+            .card .action-btn {
+                text-decoration: none;
+                color: #fff;
+                background-color: #007bff;
+                padding: 8px 15px;
+                border-radius: 4px;
+                text-align: center;
+                margin-top: 10px;
+                display: inline-block;
+            }
+
+            .card .action-btn:hover {
+                background-color: #0056b3;
+            }
+
+            .card .reject-btn {
+                background-color: #dc3545;
+            }
+
+            .card .reject-btn:hover {
+                background-color: #c82333;
+            }
+        </style>
+
+        <!-- Card container to display all researchers in card format -->
+        <div class="card-container">
+            {% for item in verify %}
+                <div class="card">
+                    <!-- User's Name -->
+                    <h3>{{ item.name }}</h3>
+
+                    <!-- User's Phone -->
+                    <p><strong>Phone:</strong> {{ item.phone }}</p>
+
+                    <!-- User's Address -->
+                    <p><strong>Address:</strong> {{ item.place }}, {{ item.post }}, {{ item.pin }}</p>
+
+                    <!-- Accept/Reject Action Buttons -->
+                    <div>
+                        {% if item.LOGIN.type == 'researcher' %}
+                            <a href="/acceptResearcher/{{ item.LOGIN.id }}" class="action-btn">Accept</a>
+                            <a href="/rejectResearcher/{{ item.LOGIN.id }}" class="action-btn reject-btn">Reject</a>
+                        {% else %}
+                            <p>{{ item.LOGIN.type }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+{% endblock %}
+

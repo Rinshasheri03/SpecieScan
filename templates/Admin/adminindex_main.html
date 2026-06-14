@@ -1,0 +1,606 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Tempo Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="/static/Tempo/assets/img/favicon.png" rel="icon">
+  <link href="/static/Tempo/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/Tempo/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/Tempo/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/Tempo/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/Tempo/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/Tempo/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="/static/Tempo/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Tempo
+  * Template URL: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="adminindex.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">SpecieScan</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+         <li><a href="" class="active">Home</a></li>
+          <li><a href="/feedbackView#about" >Feedback</a></li>
+          <li><a href="/complaintView#about">complaint</a></li>
+          <li><a href="/blockView#about">block/unblock</a></li>
+          <li><a href="/verifyView#about">verify</a></li>
+{#            <li><a href="/replyView#about">reply</a></li>#}
+ <li><a href="/viewdetails#about">Species details</a></li>
+
+{#          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>#}
+{#            <ul>#}
+{#              <li><a href="#">Dropdown 1</a></li>#}
+{#              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>#}
+{#                <ul>#}
+{#                  <li><a href="#">Deep Dropdown 1</a></li>#}
+{#                  <li><a href="#">Deep Dropdown 2</a></li>#}
+{#                  <li><a href="#">Deep Dropdown 3</a></li>#}
+{#                  <li><a href="#">Deep Dropdown 4</a></li>#}
+{#                  <li><a href="#">Deep Dropdown 5</a></li>#}
+{#                </ul>#}
+{#              </li>#}
+{#              <li><a href="#">Dropdown 2</a></li>#}
+{#              <li><a href="#">Dropdown 3</a></li>#}
+{#              <li><a href="#">Dropdown 4</a></li>#}
+{#            </ul>#}
+{#          </li>#}
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="/static/Tempo/assets/img/Web.png" alt="" data-aos="fade-in">
+
+      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2>Welcome to SpecieScan</h2>
+            <p>Butterflies remind us to spread our wings and fly</p>
+            <a href="#about" class="btn-get-started">Get Started</a>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color:royalblue">About</h2>
+        <p><span>Learn More</span> <span class="description-title" style="color:royalblue">About Us<br></span></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+{#            {% block body %}#}
+{#            {% endblock %}#}
+
+          <div class="content col-xl-5 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+            <h3>Discover Our Mission</h3>
+            <p>
+             At SpeciesScan, we focus on harnessing technology to aid in the identification and conservation of butterfly species. Our platform uses cutting-edge image recognition to analyze butterfly patterns and provide instant identification. Join us in preserving biodiversity for future generations.            </p>
+            <a href="#" class="about-btn align-self-center align-self-xl-start"><span>About us</span> <i class="bi bi-chevron-right"></i></a>
+          </div>
+
+          <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-3">
+
+              <div class="col-md-6 icon-box position-relative">
+<i class="bi bi-tree" style="color:royalblue"></i>
+                <h4><a href="" class="stretched-link">Our Commitment to Biodiversity </a></h4>
+                <p>Using the latest machine learning models, our platform can recognize butterfly species with high precision, helping enthusiasts and researchers alike.</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <i class="bi bi-people" style="color:royalblue"></i>
+                <h4><a href="" class="stretched-link">Join Our Conservation Efforts</a></h4>
+                <p>We collaborate with environmental organizations and volunteers to promote conservation efforts. You can participate in data collection and butterfly tagging through our app.</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <i class="bi bi-search" style="color:royalblue"></i>
+                <h4><a href="" class="stretched-link">Advanced Identification Techniques</a></h4>
+                <p>Using the latest machine learning models, our platform can recognize butterfly species with high precision, helping enthusiasts and researchers alike.</p>
+              </div><!-- Icon-Box -->
+
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color:royalblue">Services</h2>
+        <p>Check Our <span class="description-title" >Services</span></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-camera"></i></div>
+              <h4><a href="" class="stretched-link">Real-Time Butterfly Identification</a></h4>
+              <p>Instantly identify butterfly species by uploading images. Our platform uses advanced AI to recognize various species with high accuracy.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-book" ></i></div>
+              <h4><a href="" class="stretched-link">Educational Resources</a></h4>
+              <p>Access a rich database of information on butterfly species, including habitat, behavior, and conservation efforts.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-file-earmark-text"></i></div>
+              <h4><a href="" class="stretched-link">Field Data Collection</a></h4>
+              <p>Participate in butterfly monitoring by logging sightings and uploading images through our app, contributing to conservation efforts.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-cloud-upload"></i></div>
+              <h4><a href="" class="stretched-link">Researcher Upload Portal</a></h4>
+              <p>Researchers can upload large datasets of butterfly images for analysis and contribute to expanding our species database, supporting biodiversity studies and conservation research.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="features-item">
+              <i class="bi bi-star" style="color: #ffbb2c;"></i>
+              <h3><a href="" class="stretched-link">Danaus plexippus </a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item">
+              <i class="bi bi-star" style="color: #5578ff;"></i>
+              <h3><a href="" class="stretched-link">Helliconius charitonia</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="features-item">
+              <i class="bi bi-star" style="color: #e80368;"></i>
+              <h3><a href="" class="stretched-link">Vanessa atalanta</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="features-item">
+              <i class="bi bi-star" style="color: #e361ff;"></i>
+              <h3><a href="" class="stretched-link">Papilio cresphontes</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="features-item">
+              <i class="bi bi-star" style="color: #47aeff;"></i>
+              <h3><a href="" class="stretched-link">Nymphalis antiopa</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: royalblue">Collections</h2>
+        <p><span>Check Our</span> <span class="description-title" style="color: royalblue">Collections</span></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="/static/Tempo/assets/img/danaus.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Danaus plexippus</h4>
+                <p></p>
+{#                <a href="assets/img/danaus.jpg" title="Zoom" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="/static/Tempo/assets/img/Nymphalis.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Nymphalis antiopa</h4>
+                <p></p>
+{#                <a href="/static/Tempo/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+              </div>
+            </div><!-- End Portfolio Item -->
+
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">#}
+{#              <img src="/static/Tempo/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>Branding 1</h4>#}
+{#                <p>Lorem ipsum, dolor sit</p>#}
+{#                <a href="/static/Tempo/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="/static/Tempo/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">#}
+{#              <img src="/static/Tempo/assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>App 2</h4>#}
+{#                <p>Lorem ipsum, dolor sit</p>#}
+{#                <a href="/static/Tempo/assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="/static/Tempo/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">#}
+{#              <img src="/static/Tempo/assets/img/papilio.jpg" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>Papilio cresphontes</h4>#}
+{#                <p></p>#}
+{#                <a href="/static/Tempo/assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="/static/Tempo/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="/static/Tempo/assets/img/Heliconius.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Heliconius charitonia</h4>
+                <p></p>
+{#                <a href="/static/Tempo/assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="/static/Tempo/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+              </div>
+            </div><!-- End Portfolio Item -->
+
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">#}
+{#              <img src="/static/Tempo/assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>App 3</h4>#}
+{#                <p>Lorem ipsum, dolor sit</p>#}
+{#                <a href="/static/Tempo/assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="/static/Tempo/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="/static/Tempo/assets/img/Papilio.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Papilio cresphontes</h4>
+                <p></p>
+{#                <a href="/static/Tempo/assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="/static/Tempo/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="/static/Tempo/assets/img/Vanessa.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Vanessa atalanta</h4>
+                <p></p>
+{#                <a href="/static/Tempo/assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="/static/Tempo/portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+          <h1><b>Frequently Asked Questions</b></h1>
+
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active">
+                <h3>What are the key characteristics to look for when identifying butterflies?</h3>
+                <div class="faq-content">
+                  <p>Look for color patterns, wing shape, size, and markings. Pay attention to the behavior and habitat as well.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How can I tell the difference between butterflies and moths?</h3>
+                <div class="faq-content">
+                    <p>Butterflies generally have slender bodies, are active during the day, and have colorful wings, while moths tend to have thicker bodies, are nocturnal, and often have muted colors.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What tools do I need for butterfly identification?</h3>
+                <div class="faq-content">
+                  <p>A field guide specific to butterflies, binoculars for closer observation, a notebook for notes, and a camera for capturing images.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Are there mobile apps available for butterfly identification?</h3>
+                <div class="faq-content">
+                  <p>Yes, several apps like iNaturalist, Butterfly ID, and Seek can help you identify butterflies using images and geographical data.
+</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How can I learn about local butterfly species?</h3>
+                <div class="faq-content">
+                  <p>Consult local field guides, join butterfly-watching groups, and visit nature reserves or botanical gardens. Websites like Butterflies and Moths of North America also provide regional information.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: royalblue">Contact</h2>
+        <p><span>Need Help?</span> <span class="description-title" style="color: royalblue">Contact us<br></span></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+
+        </div><!-- End Google Maps -->
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>KAHM Unity Womens College,Manjeri</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>9037763837</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>shifasulthana63@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="adminindex.html" class="logo d-flex align-items-center">
+            <span class="sitename">SpecieScan</span>
+          </a>
+
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#"> Real-Time Butterfly Identification</a></li>
+            <li><a href="#">Educational Resources</a></li>
+            <li><a href="#">Field Data collection</a></li>
+            <li><a href="#">Researcher Upload Portal</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>shifa sulthana</p>
+          <p>KAHM Unity Womens College,Manjeri</p>
+
+          <p class="mt-4"><strong>Phone:</strong> <span>9037763837</span></p>
+          <p><strong>Email:</strong> <span>shifasulthana63@gmail.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/Tempo/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/Tempo/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/static/Tempo/assets/vendor/aos/aos.js"></script>
+  <script src="/static/Tempo/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/Tempo/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/static/Tempo/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/static/Tempo/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/static/Tempo/assets/js/main.js"></script>
+
+</body>
+
+</html>

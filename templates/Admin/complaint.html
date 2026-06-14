@@ -1,0 +1,132 @@
+{#{% extends 'Admin/adminindex.html' %}#}
+{#{% block body %}#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{#<form method="post" action="">#}
+{##}
+{#<table class="table">#}
+{#<thead class="table-dark"#}
+{#  <tr>#}
+{#    <td>Name</td>#}
+{#    <td>Complaints</td>#}
+{#    <td>Date</td>#}
+{##}
+{#      <td>send reply</td>#}
+{#      </thead>#}
+{#  </tr>#}
+{#    {%  for item in details %}#}
+{#  <tr>#}
+{#    <td>{{ item.USER.name }}</td>#}
+{#    <td>{{ item.complaint }}&nbsp;</td>#}
+{#    <td>&nbsp;{{ item.date }}</td>#}
+{##}
+{#    <td>{%  if item.reply == "pending" %}<a href="/replyView/{{ item.id }}">reply</a>{% else %}<label>{{ item.reply }}</label>#}
+{#    {%  endif %}</td>#}
+{##}
+{#  </tr>#}
+{#    {% endfor %}#}
+{#</table>#}
+{#    </form>#}
+{#</body>#}
+{#{% endblock %}#}
+{##}
+{##}
+{##}
+{##}
+{% extends 'Admin/adminindex.html' %}
+
+{% block body %}
+    <body>
+        <style>
+            /* Card container */
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }
+
+            /* Individual card styling */
+            .card {
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            /* Card title (User Name) */
+            .card h3 {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            /* Styling for the complaint text */
+            .card p {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+
+            /* Date styling */
+            .card .date {
+                font-size: 0.9em;
+                color: #888;
+            }
+
+            /* Reply section styling */
+            .card .reply {
+                font-size: 1.1em;
+                color: #ff9f00;
+                margin-top: 10px;
+            }
+
+            /* Send reply button styling */
+            .card .reply a {
+                text-decoration: none;
+                color: #fff;
+                background-color: #007bff;
+                padding: 8px 15px;
+                border-radius: 4px;
+                text-align: center;
+                margin-top: 10px;
+                display: block;
+                text-align: center;
+            }
+
+            .card .reply a:hover {
+                background-color: #0056b3;
+            }
+        </style>
+
+        <!-- Card container to display all complaints in card format -->
+        <div class="card-container">
+            {% for item in details %}
+                <div class="card">
+                    <!-- User Name -->
+                    <h3>{{ item.USER.name }}</h3>
+                    <!-- Complaint text -->
+                    <p><strong>Complaint:</strong> {{ item.complaint }}</p>
+                    <!-- Complaint Date -->
+                    <p class="date"><strong>Date:</strong> {{ item.date }}</p>
+
+                    <!-- Reply Section -->
+                    <div class="reply">
+                        {% if item.reply == "pending" %}
+                            <a href="/replyView/{{ item.id }}">Reply</a>
+                        {% else %}
+                            <label>{{ item.reply }}</label>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+{% endblock %}
