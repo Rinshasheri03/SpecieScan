@@ -1,83 +1,88 @@
 # SpecieScan
 Butterfly Identification using AI
 
-🦋 SpeciesScan – Butterfly Species Identification using CNN
-📌 Project Overview
+SpeciesScan – Butterfly Species Identification using CNN
+Project Overview
 
-SpeciesScan is a deep learning-based web application that identifies butterfly species from images. The system uses a Convolutional Neural Network (CNN) trained on butterfly datasets to classify species with high accuracy.
+SpeciesScan is a machine learning-based application designed to identify butterfly species from images. The system uses a Convolutional Neural Network (CNN) trained on a dataset of butterfly images to classify species accurately. The project aims to demonstrate the application of deep learning in image classification and biodiversity identification.
 
-This project is designed to help students, researchers, and nature enthusiasts quickly identify butterfly species using image input.
+Objective
+The main objective of this project is to develop an automated system capable of identifying butterfly species from images using deep learning techniques. It also aims to provide a simple interface for users to upload images and obtain predictions in real time.
 
-🎯 Objective
-To build an AI model that can classify butterfly species from images.
-To apply Deep Learning (CNN) for image recognition.
-To develop a simple web interface for real-time prediction.
-🧠 Technology Used
-Python 🐍
-TensorFlow / Keras 🤖
-Convolutional Neural Network (CNN)
-OpenCV (Image Processing)
-Flask (Web Framework) (if used)
-HTML, CSS (Frontend)
-NumPy, Pandas
-🗂️ Project Structure
-SpeciesScan/
-│
-├── dataset/                 # Butterfly image dataset
-├── model/                   # Trained CNN model
-│   └── butterfly_model.h5
-├── static/                  # CSS, JS, images
-├── templates/              # HTML files
-├── app.py                  # Flask web application
-├── train_model.py          # CNN training script
-├── requirements.txt        # Required dependencies
-├── README.md               # Project documentation
-└── .gitignore              # Files to ignore in Git
-🧪 How It Works
-User uploads a butterfly image.
-Image is preprocessed (resized, normalized).
-CNN model extracts features from the image.
-Model predicts the butterfly species.
-Result is displayed on the web interface.
-🧠 Model Architecture (CNN)
-Input Layer (Image input)
-Convolutional Layers
-Max Pooling Layers
-Flatten Layer
-Dense Fully Connected Layers
-Output Layer (Softmax classification)
-🚀 Installation & Setup
-1. Clone the repository
-git clone https://github.com/your-username/SpeciesScan.git
+Technologies Used
+
+. Python
+. TensorFlow and Keras
+. Convolutional Neural Network (CNN)
+. OpenCV for image processing
+. Flask for web application development (if applicable)
+. HTML and CSS for frontend design
+. NumPy and Pandas for data handling
+
+Project Structure
+
+SpeciesScan project contains the following structure
+
+SpeciesScan
+dataset directory containing training and testing images
+model directory containing the trained CNN model file
+static directory for CSS, JavaScript, and images
+templates directory for HTML files
+app.py main Flask application file
+train_model.py script used to train the CNN model
+requirements.txt file containing project dependencies
+README.md project documentation file
+gitignore file for ignoring unnecessary files in Git
+
+Working Methodology
+The user uploads a butterfly image through the application interface.
+The image is preprocessed by resizing and normalization.
+The trained CNN model extracts important features from the image.
+The model classifies the image into a specific butterfly species.
+The predicted result is displayed to the user.
+Model Architecture
+
+The CNN model used in this project consists of the following layers
+Input layer for image input
+Convolutional layers for feature extraction
+Max pooling layers for dimensionality reduction
+Flatten layer to convert feature maps into a vector
+Fully connected dense layers for classification
+Output layer using softmax activation for species prediction
+
+Installation and Setup
+
+Step 1: Clone the repository
+git clone https://github.com/Rinshashei03/SpeciesScan.git
 cd SpeciesScan
-2. Create virtual environment (optional but recommended)
+
+Step 2: Create a virtual environment
 python -m venv venv
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
-3. Install dependencies
+activate the environment using appropriate command for your operating system
+
+Step 3: Install dependencies
 pip install -r requirements.txt
-4. Run the application
+
+Step 4: Run the application
 python app.py
 
-Then open:
+After running the application open the browser and go to
+ http://0.0.0.0:8000/
 
-http://127.0.0.1:5000/
-📊 Results
-Achieved high accuracy using CNN model
-Improved performance compared to RNN/LSTM approaches
-Fast and reliable prediction on butterfly images
-📷 Sample Output
+Results
 
-(Add screenshots of your project here)
+The model successfully classifies butterfly species with good accuracy. CNN performed better compared to other models such as RNN and LSTM for image classification tasks. The system provides fast and reliable predictions.
 
-🔮 Future Improvements
-Increase dataset size for better accuracy
-Deploy model on cloud (AWS / Render / HuggingFace)
-Add mobile app version
-Improve UI for better user experience
-Add more insect species classification
-👨‍💻 Author
+Future Enhancements
+
+The project can be improved further by increasing dataset size for better accuracy, deploying the model on cloud platforms, developing a mobile application version, and expanding the system to classify other insect species.
+
+Author
 
 Rinsha Sherin
 Computer Science Student
-Passionate about AI, ML, and Web Development
+Interested in Machine Learning, Deep Learning, and Web Development
+
+License
+
+This project is intended for educational purposes and can be extended or modified as needed.
